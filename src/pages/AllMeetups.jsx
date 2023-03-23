@@ -7,7 +7,7 @@ function AllMeetupsPage() {
 
   useEffect(() => {
     fetch(
-      'https://learning-react-66f77-default-rtdb.asia-southeast1.firebasedatabase.app/meetups.json',
+      process.env.REACT_APP_FIREBASE,
     ).then((response) => {
       return response.json();
     }).then((data) => {
